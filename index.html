@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heating Fuel Cost Forecaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="container">
+    <header>
+        <h1 class="header-title">Heating Fuel Cost Forecaster</h1>
+    </header>
+
+    <section class="controls">
+        <label for="modeSelector" class="control-label">Mode:</label>
+        <select id="modeSelector" onchange="changeMode()" class="control-select">
+            <option value="historical">Historical</option>
+            <option value="forecast">Forecast</option>
+        </select>
+        <button onclick="scrollBack()" class="control-button">Scroll Back</button>
+        <button onclick="scrollForward()" class="control-button">Scroll Forward</button>
+    </section>
+
+    <section class="chart-container">
+        <canvas id="fuelCostChart"></canvas>
+    </section>
+
+    <section id="error-message" class="error-message"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>
